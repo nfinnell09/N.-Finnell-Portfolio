@@ -242,9 +242,16 @@
 
   /* ---------- about ---------- */
   .about-grid{
-    display: grid; grid-template-columns: 1.3fr .8fr; gap: 40px;
-    align-items: start;
+    display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px;
+    align-items: center;
   }
+  .about-grid .about-body{ max-width: none; }
+  .about-grid .pilot-photo{ margin: 0; }
+  .about-grid .pilot-photo img{
+    display: block; width: 100%; height: auto; border-radius: 2px;
+    border: 1px solid var(--line);
+  }
+  .about-grid .pilot-photo figcaption{ text-align: left; }
   @media (max-width: 700px){ .about-grid{ grid-template-columns: 1fr; } }
   .about-body{ max-width: 62ch; }
   .about-body p{ margin: 0 0 1em; }
